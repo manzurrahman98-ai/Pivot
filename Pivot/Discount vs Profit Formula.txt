@@ -1,0 +1,11 @@
+8. Discount vs Profit Analysis (Advanced)
+Manager asks: “How do discounts affect profit? Group discounts into buckets (0-10%, 10-20%, 20%+).”
+Pivot Table Setup:
+
+Add helper column in source data: =IF([Discount (%)]<=0.1,"0-10%",IF([Discount (%)]<=0.2,"10-20%","20%+"))
+Rows → Discount Bucket
+Values → Sum of Profit, Average of Discount (%)
+
+Real-world value: Heavy discounts often destroy profit. Classic interview question: “Would you recommend reducing discounts?”
+Formula:
+=IF(J2<=0.1,"0-10%",IF(J2<=0.2,"10-20%","20%+"))
